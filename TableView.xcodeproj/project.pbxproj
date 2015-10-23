@@ -15,6 +15,8 @@
 		8143AE891BDA8CC8005C251B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8143AE7F1BDA8CC7005C251B /* LaunchScreen.storyboard */; };
 		8143AE8A1BDA8CC8005C251B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8143AE811BDA8CC8005C251B /* Main.storyboard */; };
 		8143AE8C1BDA8CC8005C251B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8143AE851BDA8CC8005C251B /* main.m */; };
+		816C22FF1BDA99A800BBBD07 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 816C22FE1BDA99A800BBBD07 /* City.m */; };
+		816C23061BDA9B6400BBBD07 /* CityCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 816C23051BDA9B6400BBBD07 /* CityCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		8143AE821BDA8CC8005C251B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8143AE841BDA8CC8005C251B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8143AE851BDA8CC8005C251B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		816C22FD1BDA99A800BBBD07 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		816C22FE1BDA99A800BBBD07 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		816C23041BDA9B6400BBBD07 /* CityCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCellTableViewCell.h; sourceTree = "<group>"; };
+		816C23051BDA9B6400BBBD07 /* CityCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		8143AE431BDA8C7E005C251B /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				816C23001BDA9B1000BBBD07 /* Views */,
+				816C22F81BDA991300BBBD07 /* Model */,
 				8143AE771BDA8CC7005C251B /* AppDelegate */,
 				8143AE7A1BDA8CC7005C251B /* Controller */,
 				8143AE7D1BDA8CC7005C251B /* Resources */,
@@ -162,6 +170,24 @@
 				8143AE851BDA8CC8005C251B /* main.m */,
 			);
 			path = "Suppporting Files";
+			sourceTree = "<group>";
+		};
+		816C22F81BDA991300BBBD07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				816C22FD1BDA99A800BBBD07 /* City.h */,
+				816C22FE1BDA99A800BBBD07 /* City.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		816C23001BDA9B1000BBBD07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				816C23041BDA9B6400BBBD07 /* CityCellTableViewCell.h */,
+				816C23051BDA9B6400BBBD07 /* CityCellTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +322,8 @@
 			files = (
 				8143AE861BDA8CC8005C251B /* AppDelegate.m in Sources */,
 				8143AE8C1BDA8CC8005C251B /* main.m in Sources */,
+				816C22FF1BDA99A800BBBD07 /* City.m in Sources */,
+				816C23061BDA9B6400BBBD07 /* CityCellTableViewCell.m in Sources */,
 				8143AE871BDA8CC8005C251B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +550,7 @@
 				8143AE701BDA8C7E005C251B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8143AE711BDA8C7E005C251B /* Build configuration list for PBXNativeTarget "TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +559,7 @@
 				8143AE731BDA8C7E005C251B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8143AE741BDA8C7E005C251B /* Build configuration list for PBXNativeTarget "TableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +568,7 @@
 				8143AE761BDA8C7E005C251B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

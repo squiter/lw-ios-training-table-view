@@ -17,9 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZQ-ds-sJD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZQ-ds-sJD">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="92" id="vUY-Jw-HfJ" customClass="CityCellTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vUY-Jw-HfJ" id="IQj-pG-zrG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="njN-Z7-lDl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="91"/>
+                                                </imageView>
+                                                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-lW-AyY">
+                                                    <rect key="frame" x="0.0" y="61" width="600" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-wi-1To">
+                                                            <rect key="frame" x="279" y="4" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="QPh-6x-Ex8"/>
+                                                        <constraint firstItem="GNb-wi-1To" firstAttribute="centerX" secondItem="wOy-lW-AyY" secondAttribute="centerX" id="ZDy-qG-Wz2"/>
+                                                        <constraint firstItem="GNb-wi-1To" firstAttribute="centerY" secondItem="wOy-lW-AyY" secondAttribute="centerY" id="xG9-qP-kQG"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="njN-Z7-lDl" secondAttribute="bottom" id="635-VN-0cH"/>
+                                                <constraint firstAttribute="trailing" secondItem="wOy-lW-AyY" secondAttribute="trailing" id="SD5-hz-cNR"/>
+                                                <constraint firstItem="njN-Z7-lDl" firstAttribute="leading" secondItem="IQj-pG-zrG" secondAttribute="leading" id="Tcc-0s-Vjg"/>
+                                                <constraint firstItem="njN-Z7-lDl" firstAttribute="top" secondItem="IQj-pG-zrG" secondAttribute="top" id="eEX-wG-kjM"/>
+                                                <constraint firstAttribute="bottom" secondItem="wOy-lW-AyY" secondAttribute="bottom" id="pPq-p8-lGz"/>
+                                                <constraint firstItem="wOy-lW-AyY" firstAttribute="leading" secondItem="IQj-pG-zrG" secondAttribute="leading" id="uyR-e2-6Do"/>
+                                                <constraint firstAttribute="trailing" secondItem="njN-Z7-lDl" secondAttribute="trailing" id="wN2-g8-VAl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="njN-Z7-lDl" id="dQK-Dw-ylm"/>
+                                            <outlet property="labelContainerView" destination="wOy-lW-AyY" id="neI-gi-0Ax"/>
+                                            <outlet property="nameLabel" destination="GNb-wi-1To" id="r45-rU-uit"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Vve-be-thf"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zS4-OA-157"/>
@@ -40,6 +86,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="city" width="5800" height="1800"/>
+    </resources>
 </document>

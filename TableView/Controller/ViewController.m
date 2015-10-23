@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "City.h"
+#import "CityCellTableViewCell.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -19,12 +21,19 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
-    self.data = @[@"Belo Horizonte", @"São Paulo", @"Rio de Janeiro",
-                  @"Porto Alegre", @"Salvador", @"Brasilia"];
-    
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"Cell"];
+    [self setupInitialValues];
+}
+
+- (void)setupInitialValues {
+
+    self.data = @[
+                  [[City alloc] initWithName:@"Belo Horizonte" imageName:@"city1"],
+                  [[City alloc] initWithName:@"São Paulo" imageName:@"city2"],
+                  [[City alloc] initWithName:@"Rio de Janeiro" imageName:@"city3"],
+                  [[City alloc] initWithName:@"Porto Alegre" imageName:@"city4"],
+                  [[City alloc] initWithName:@"Salvador" imageName:@"city5"],
+                  [[City alloc] initWithName:@"Brasilia" imageName:@"city6"]
+                  ];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -32,10 +41,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
+    CityCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
                                                             forIndexPath:indexPath];
     
-    cell.textLabel.text = self.data[indexPath.row];
+    City *city = self.data[indexPath.row];
+    cell.nameLabel.text = city.name;
+    cell.backgroundImageView.image = [UIImage imageNamed:city.imageName];
     
     return cell;
 }
