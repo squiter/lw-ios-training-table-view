@@ -13,7 +13,7 @@
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) NSMutableArray *data;
 
 @end
 
@@ -26,14 +26,14 @@
 
 - (void)setupInitialValues {
 
-    self.data = @[
+    self.data = [NSMutableArray arrayWithArray: @[
                   [[City alloc] initWithName:@"Belo Horizonte" imageName:@"city1"],
                   [[City alloc] initWithName:@"São Paulo" imageName:@"city2"],
                   [[City alloc] initWithName:@"Rio de Janeiro" imageName:@"city3"],
                   [[City alloc] initWithName:@"Porto Alegre" imageName:@"city4"],
                   [[City alloc] initWithName:@"Salvador" imageName:@"city5"],
                   [[City alloc] initWithName:@"Brasilia" imageName:@"city6"]
-                  ];
+                ]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -66,6 +66,17 @@
     [alertController addAction:okAction];
     
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView
+        commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+        forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.data removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 @end
