@@ -33,9 +33,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)cancelButtonTap:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+// Removes to use the default < button in ViewController.m
+//- (IBAction)cancelButtonTap:(id)sender{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 
 /*
