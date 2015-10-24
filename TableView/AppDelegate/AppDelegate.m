@@ -17,6 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    UIFont * font = [UIFont fontWithName:@"AvenirNext-Medium" size:19];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: font
+                                                           }];
+    [[UINavigationBar appearance] setBarTintColor: [UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor: [UIColor redColor]];
+    
     return YES;
 }
 
