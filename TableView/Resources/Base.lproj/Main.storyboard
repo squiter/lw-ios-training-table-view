@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -83,7 +84,7 @@
                     <navigationItem key="navigationItem" id="aiT-LS-yVN"/>
                     <connections>
                         <outlet property="tableView" destination="yZQ-ds-sJD" id="SBf-yK-PHd"/>
-                        <segue destination="kxY-4f-jGi" kind="show" identifier="vcToDvc" id="wTb-PE-deQ"/>
+                        <segue destination="kxY-4f-jGi" kind="presentation" identifier="vcToDvc" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="wTb-PE-deQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,11 +103,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="city4" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-uI-MwY">
-                                <rect key="frame" x="0.0" y="64" width="600" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7P-r0-umc">
+                                <rect key="frame" x="0.0" y="362" width="600" height="51"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jts-Jm-eCW">
+                                <rect key="frame" x="532" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTap:" destination="kxY-4f-jGi" eventType="touchUpInside" id="6Ii-Zr-D5M"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city4" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-uI-MwY">
+                                <rect key="frame" x="0.0" y="54" width="600" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Cem-DI-U7i"/>
-                                    <constraint firstAttribute="height" constant="300" id="h4R-az-h3b"/>
+                                    <constraint firstAttribute="height" constant="300" id="KMU-wQ-3FC"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -114,21 +128,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7P-r0-umc">
-                                <rect key="frame" x="0.0" y="184" width="600" height="51"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="42"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MbN-uI-MwY" firstAttribute="leading" secondItem="xGl-wE-pF6" secondAttribute="leading" id="25c-y6-wPw"/>
-                            <constraint firstItem="M7P-r0-umc" firstAttribute="top" secondItem="MbN-uI-MwY" secondAttribute="bottom" constant="20" id="KXp-0P-w9H"/>
+                            <constraint firstAttribute="trailing" secondItem="MbN-uI-MwY" secondAttribute="trailing" id="MVR-k2-bcg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jts-Jm-eCW" secondAttribute="trailing" id="OVy-eK-luG"/>
+                            <constraint firstItem="MbN-uI-MwY" firstAttribute="leading" secondItem="xGl-wE-pF6" secondAttribute="leading" id="V4e-78-VnQ"/>
                             <constraint firstItem="M7P-r0-umc" firstAttribute="leading" secondItem="xGl-wE-pF6" secondAttribute="leading" id="XNT-7t-hmQ"/>
+                            <constraint firstItem="M7P-r0-umc" firstAttribute="top" secondItem="MbN-uI-MwY" secondAttribute="bottom" constant="8" symbolic="YES" id="XVQ-Jv-fgw"/>
                             <constraint firstAttribute="trailing" secondItem="M7P-r0-umc" secondAttribute="trailing" id="cH9-kD-ruS"/>
-                            <constraint firstItem="MbN-uI-MwY" firstAttribute="top" secondItem="XUV-hd-oKf" secondAttribute="bottom" id="qSy-3s-FlN"/>
-                            <constraint firstAttribute="trailing" secondItem="MbN-uI-MwY" secondAttribute="trailing" id="san-0r-qrM"/>
+                            <constraint firstItem="Jts-Jm-eCW" firstAttribute="top" secondItem="XUV-hd-oKf" secondAttribute="bottom" id="rjp-P9-pDp"/>
+                            <constraint firstItem="MbN-uI-MwY" firstAttribute="top" secondItem="Jts-Jm-eCW" secondAttribute="bottom" constant="4" id="yMJ-Tj-i2S"/>
                         </constraints>
                     </view>
                     <connections>
