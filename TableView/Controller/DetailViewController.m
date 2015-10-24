@@ -24,6 +24,7 @@
     NSLog(@"%@", self.city.name);
     NSLog(@"%@", self.city.imageName);
     
+    self.title = self.city.name;
     self.cityName.text = self.city.name;
     self.cityImage.image = [UIImage imageNamed:self.city.imageName];
 }

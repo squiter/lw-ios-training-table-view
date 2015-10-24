@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cidades-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <constraint firstAttribute="trailing" secondItem="yZQ-ds-sJD" secondAttribute="trailing" id="vHY-Hn-INF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aiT-LS-yVN"/>
+                    <navigationItem key="navigationItem" title="Cidades" id="tNj-O4-nO0"/>
                     <connections>
                         <outlet property="tableView" destination="yZQ-ds-sJD" id="SBf-yK-PHd"/>
                         <segue destination="kxY-4f-jGi" kind="show" identifier="vcToDvc" id="wTb-PE-deQ"/>
