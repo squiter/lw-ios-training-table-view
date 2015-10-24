@@ -15,6 +15,7 @@
 		8143AE891BDA8CC8005C251B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8143AE7F1BDA8CC7005C251B /* LaunchScreen.storyboard */; };
 		8143AE8A1BDA8CC8005C251B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8143AE811BDA8CC8005C251B /* Main.storyboard */; };
 		8143AE8C1BDA8CC8005C251B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8143AE851BDA8CC8005C251B /* main.m */; };
+		815805011BDBA7D50006BCB0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815805001BDBA7D50006BCB0 /* DetailViewController.m */; };
 		816C22FF1BDA99A800BBBD07 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 816C22FE1BDA99A800BBBD07 /* City.m */; };
 		816C23061BDA9B6400BBBD07 /* CityCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 816C23051BDA9B6400BBBD07 /* CityCellTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		8143AE821BDA8CC8005C251B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8143AE841BDA8CC8005C251B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8143AE851BDA8CC8005C251B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		815804FF1BDBA7D50006BCB0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		815805001BDBA7D50006BCB0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		816C22FD1BDA99A800BBBD07 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		816C22FE1BDA99A800BBBD07 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 		816C23041BDA9B6400BBBD07 /* CityCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCellTableViewCell.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				8143AE7B1BDA8CC7005C251B /* ViewController.h */,
 				8143AE7C1BDA8CC7005C251B /* ViewController.m */,
+				815804FF1BDBA7D50006BCB0 /* DetailViewController.h */,
+				815805001BDBA7D50006BCB0 /* DetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				816C22FF1BDA99A800BBBD07 /* City.m in Sources */,
 				816C23061BDA9B6400BBBD07 /* CityCellTableViewCell.m in Sources */,
 				8143AE871BDA8CC8005C251B /* ViewController.m in Sources */,
+				815805011BDBA7D50006BCB0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

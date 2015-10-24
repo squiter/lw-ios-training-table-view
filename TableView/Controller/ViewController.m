@@ -56,17 +56,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    City *city = self.data[indexPath.row];	
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Cidade"
-                                                                             message:city.name
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:okAction];
-    
-    [self presentViewController:alertController animated:YES completion:nil];
-}
+// Removed because we add a segue to any cell, so we don't need this alert anymore
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    City *city = self.data[indexPath.row];	
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Cidade"
+//                                                                             message:city.name
+//                                                                      preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:okAction];
+//    
+//    [self presentViewController:alertController animated:YES completion:nil];
+//}
 
 - (void)tableView:(UITableView *)tableView
         commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
