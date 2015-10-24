@@ -58,17 +58,26 @@
 }
 
 // Removed because we add a segue to any cell, so we don't need this alert anymore
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    City *city = self.data[indexPath.row];	
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Cidade"
-//                                                                             message:city.name
-//                                                                      preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-//    [alertController addAction:okAction];
-//    
-//    [self presentViewController:alertController animated:YES completion:nil];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    City *city = self.data[indexPath.row];	
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Cidade"
+                                                                             message:city.name
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *detailAction = [UIAlertAction actionWithTitle:@"Detalhe"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         [self performSegueWithIdentifier:@"vcToDvc" sender:nil];
+                                                     }]; 
+    [alertController addAction:detailAction];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancelar"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:nil];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 - (void)tableView:(UITableView *)tableView
         commitEditingStyle:(UITableViewCellEditingStyle)editingStyle

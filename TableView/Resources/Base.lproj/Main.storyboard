@@ -63,7 +63,6 @@
                                             <outlet property="backgroundImageView" destination="njN-Z7-lDl" id="dQK-Dw-ylm"/>
                                             <outlet property="labelContainerView" destination="wOy-lW-AyY" id="neI-gi-0Ax"/>
                                             <outlet property="nameLabel" destination="GNb-wi-1To" id="r45-rU-uit"/>
-                                            <segue destination="kxY-4f-jGi" kind="show" identifier="CityDetailSegue" id="1SJ-bJ-5Vf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,6 +83,7 @@
                     <navigationItem key="navigationItem" id="aiT-LS-yVN"/>
                     <connections>
                         <outlet property="tableView" destination="yZQ-ds-sJD" id="SBf-yK-PHd"/>
+                        <segue destination="kxY-4f-jGi" kind="show" identifier="vcToDvc" id="wTb-PE-deQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
