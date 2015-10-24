@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "City.h"
 #import "CityCellTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -77,6 +78,16 @@
         [self.data removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath]
                               withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"CityDetailSegue"]) {
+        DetailViewController *detailVC = segue.destinationViewController;
+        City *city = self.data[self.tableView.indexPathForSelectedRow.row];
+        detailVC.city = city;
     }
 }
 
