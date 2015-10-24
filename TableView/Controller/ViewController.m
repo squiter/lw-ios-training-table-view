@@ -79,7 +79,7 @@
     [alertController addAction:detailAction];
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancelar"
-                                                           style:UIAlertActionStyleDefault
+                                                           style:UIAlertActionStyleCancel
                                                          handler:nil];
     [alertController addAction:cancelAction];
     
