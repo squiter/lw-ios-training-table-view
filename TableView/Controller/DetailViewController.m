@@ -10,6 +10,9 @@
 
 @interface DetailViewController ()
 
+@property (nonatomic, weak) IBOutlet UILabel *cityName;
+@property (nonatomic, weak) IBOutlet UIImageView *cityImage;
+
 @end
 
 @implementation DetailViewController
@@ -17,7 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     NSLog(@"%@", self.city.name);
+    NSLog(@"%@", self.city.imageName);
+    
+    self.cityName.text = self.city.name;
+    self.cityImage.image = [UIImage imageNamed:self.city.imageName];
 }
 
 - (void)didReceiveMemoryWarning {

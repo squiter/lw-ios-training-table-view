@@ -93,7 +93,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"CityDetailSegue"]) {
+    if ([segue.identifier isEqualToString:@"vcToDvc"]) {
         DetailViewController *detailVC = segue.destinationViewController;
         City *city = self.data[self.tableView.indexPathForSelectedRow.row];
         detailVC.city = city;

@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="njN-Z7-lDl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city1" translatesAutoresizingMaskIntoConstraints="NO" id="njN-Z7-lDl">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="91"/>
                                                 </imageView>
                                                 <view userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOy-lW-AyY">
@@ -101,8 +101,40 @@
                     <view key="view" contentMode="scaleToFill" id="xGl-wE-pF6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="city4" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-uI-MwY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cem-DI-U7i"/>
+                                    <constraint firstAttribute="height" constant="300" id="h4R-az-h3b"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cem-DI-U7i"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7P-r0-umc">
+                                <rect key="frame" x="0.0" y="184" width="600" height="51"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MbN-uI-MwY" firstAttribute="leading" secondItem="xGl-wE-pF6" secondAttribute="leading" id="25c-y6-wPw"/>
+                            <constraint firstItem="M7P-r0-umc" firstAttribute="top" secondItem="MbN-uI-MwY" secondAttribute="bottom" constant="20" id="KXp-0P-w9H"/>
+                            <constraint firstItem="M7P-r0-umc" firstAttribute="leading" secondItem="xGl-wE-pF6" secondAttribute="leading" id="XNT-7t-hmQ"/>
+                            <constraint firstAttribute="trailing" secondItem="M7P-r0-umc" secondAttribute="trailing" id="cH9-kD-ruS"/>
+                            <constraint firstItem="MbN-uI-MwY" firstAttribute="top" secondItem="XUV-hd-oKf" secondAttribute="bottom" id="qSy-3s-FlN"/>
+                            <constraint firstAttribute="trailing" secondItem="MbN-uI-MwY" secondAttribute="trailing" id="san-0r-qrM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityImage" destination="MbN-uI-MwY" id="jpo-X9-5yl"/>
+                        <outlet property="cityName" destination="M7P-r0-umc" id="ryr-jF-TuY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXx-If-zUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="city" width="5800" height="1800"/>
+        <image name="city1" width="5800" height="1800"/>
+        <image name="city4" width="3033" height="353"/>
     </resources>
 </document>
