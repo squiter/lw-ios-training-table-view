@@ -10,6 +10,7 @@
 #import "City.h"
 #import "CityCellTableViewCell.h"
 #import "DetailViewController.h"
+#import "UINavigationController+StatusBarPatch.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -105,6 +106,10 @@
         City *city = self.data[self.tableView.indexPathForSelectedRow.row];
         detailVC.city = city;
     }
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end
